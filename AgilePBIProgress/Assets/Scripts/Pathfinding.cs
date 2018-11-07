@@ -12,6 +12,8 @@ public class Pathfinding : MonoBehaviour
     Grid grid;
     Node targetNode;
 
+    Vector3 goToPosition;
+
     private void Awake()
     {
         grid = GetComponent<Grid>();
@@ -25,13 +27,14 @@ public class Pathfinding : MonoBehaviour
         if (grid.path != null && startPosition.position != targetPosition.position && grid.path.Count > 0)
         {
             targetNode = grid.path[0];
+            goToPosition = new Vector3(targetNode.position.x, startPosition.position.y, targetNode.position.z);
         }
         else if (startPosition.position == targetPosition.position)
         {
             grid.path = null;
             targetNode = null;
         }
-        startPosition.position = Vector3.MoveTowards(startPosition.position, targetNode.position, speed * Time.deltaTime);
+        startPosition.position = Vector3.MoveTowards(startPosition.position, goToPosition, speed * Time.deltaTime);
 
     }
 
@@ -112,12 +115,12 @@ public class Pathfinding : MonoBehaviour
 
     void FollowPath(List<Node> pathToFollow)
     {
-        float moveSpeed = speed * Time.deltaTime;
         foreach (Node node in pathToFollow)
         {
             while (startPosition.position != node.position)
             {
-                startPosition.position = Vector3.Lerp(startPosition.position, node.position, moveSpeed);
+                Vector3 goToPosition = new Vector3(node.position.x, startPosition.position.y, node.position.z);
+                startPosition.position = Vector3.Lerp(startPosition.position, goToPosition, speed * Time.deltaTime);
             }
         }
     }

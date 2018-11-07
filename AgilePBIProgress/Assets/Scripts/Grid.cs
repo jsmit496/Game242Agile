@@ -120,7 +120,6 @@ public class Grid : MonoBehaviour
             }
         }
 
-        /*
         //Top-Left Side
         xCheck = _node.gridX - 1;
         yCheck = _node.gridY + 1;
@@ -164,7 +163,6 @@ public class Grid : MonoBehaviour
                 neighborNodes.Add(grid[xCheck, yCheck]);
             }
         }
-        */
 
         return neighborNodes;
     }
