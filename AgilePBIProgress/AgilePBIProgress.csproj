@@ -289,6 +289,10 @@
       <Project>{B3DFFE5F-BC87-0DDD-1629-80727FEFB9DB}</Project>
       <Name>AgilePBIProgress.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
+      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
+      <Name>UnityEditor.StandardEvents</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -301,15 +305,32 @@
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
-      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
-      <Name>UnityEditor.StandardEvents</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\handleMovement.cs" />
-    <Compile Include="Assets\TemperatureManager.cs" />
-    <Compile Include="Assets\TemperatureSetter.cs" />
+    <Compile Include="Assets\InteriorController.cs" />
+    <Compile Include="Assets\InteriorFloorController.cs" />
+    <Compile Include="Assets\Scripts\ChangeDisplay.cs" />
+    <Compile Include="Assets\Scripts\CheckInterior.cs" />
+    <Compile Include="Assets\Scripts\ExposureSettings.cs" />
+    <Compile Include="Assets\Scripts\FollowGameObject.cs" />
+    <Compile Include="Assets\Scripts\GameTimer.cs" />
+    <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\handleMovement.cs" />
+    <Compile Include="Assets\Scripts\LookAtCamera.cs" />
+    <Compile Include="Assets\Scripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\ManagePlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\PickupItem.cs" />
+    <Compile Include="Assets\Scripts\PickupType.cs" />
+    <Compile Include="Assets\Scripts\SetCanvasToObject.cs" />
+    <Compile Include="Assets\Scripts\TemperatureManager.cs" />
+    <Compile Include="Assets\Scripts\TemperatureSetter.cs" />
+    <Compile Include="Assets\Scripts\TestMoveTarget.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\ObjectInteraction1.cs" />
+    <Compile Include="Assets\Scripts\WeatherSetter.cs" />
+    <Compile Include="Assets\Scripts\ZoomCamera.cs" />
+    <Compile Include="Assets\TestQuestMarkerCompass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
