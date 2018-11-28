@@ -6,6 +6,9 @@ public class Pathfinding : MonoBehaviour
 {
     public Transform startPosition;
     public Transform targetPosition;
+    public GameObject[] objectToCheck;
+    public string[] component;
+    
 
     public float speed = 4.0f;
 

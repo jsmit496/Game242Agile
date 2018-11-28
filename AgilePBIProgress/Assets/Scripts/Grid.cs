@@ -26,13 +26,7 @@ public class Grid : MonoBehaviour
 
     private void Update()
     {
-        if (path != null)
-        {
-            foreach (Node node in path)
-            {
-                print(string.Format("X: {0}; y: {1}", node.gridX, node.gridY));
-            }
-        }
+
     }
 
     void CreateGrid()
@@ -57,16 +51,20 @@ public class Grid : MonoBehaviour
 
     public Node NodeFromWorldPosition(Vector3 _worldPosition)
     {
-        float percentX = ((_worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x);
-        float percentY = ((_worldPosition.z + gridWorldSize.y / 2) / gridWorldSize.y);
+        if (grid != null)
+        {
+            float percentX = ((_worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x);
+            float percentY = ((_worldPosition.z + gridWorldSize.y / 2) / gridWorldSize.y);
 
-        percentX = Mathf.Clamp01(percentX);
-        percentY = Mathf.Clamp01(percentY);
+            percentX = Mathf.Clamp01(percentX);
+            percentY = Mathf.Clamp01(percentY);
 
-        int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
-        int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
+            int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
+            int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
 
-        return grid[x, y];
+            return grid[x, y];
+        }
+        return null;
     }
 
     public List<Node> GetNeighborNodes(Node _node)

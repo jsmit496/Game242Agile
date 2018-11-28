@@ -120,6 +120,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: component.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: objectToCheck.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4331754339443632, guid: b12c6d924fe767249a10b1d5c720ad27, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,6 +181,31 @@ Prefab:
       propertyPath: targetPosition
       value: 
       objectReference: {fileID: 584814107}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: component.Array.data[0]
+      value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: component.Array.data[1]
+      value: Pathfinding
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: objectToCheck.Array.data[0]
+      value: 
+      objectReference: {fileID: 1677029728}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: component.Array.data[2]
+      value: TemperatureManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249659370655940, guid: b12c6d924fe767249a10b1d5c720ad27,
+        type: 2}
+      propertyPath: objectToCheck.Array.data[1]
+      value: 
+      objectReference: {fileID: 352439623}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12c6d924fe767249a10b1d5c720ad27, type: 2}
   m_IsPrefabAsset: 0
@@ -403,6 +438,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 235486391}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &352439623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1747503463386584, guid: b12c6d924fe767249a10b1d5c720ad27,
+    type: 2}
+  m_PrefabInternal: {fileID: 114954001}
 --- !u!114 &380580241 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114976090142501126, guid: 5a1f5a25eababed4cb71a9ccdd07aaeb,
@@ -1418,6 +1458,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 950173228}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TestSave
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 950173228}
         m_MethodName: LoadLevel
         m_Mode: 5

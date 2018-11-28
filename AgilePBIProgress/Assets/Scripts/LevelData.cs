@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Text;
 
@@ -32,8 +33,14 @@ public class LevelData : MonoBehaviour
 		
 	}
 
+    public void LoadScene()
+    {
+        //SceneManager.LoadScene("SampleScene");
+    }
+
     public void LoadLevel(string levelName)
     {
+        //SceneManager.LoadScene("SampleScene");
         DataHandler level = DataHandler.LoadFromFile(levelName + ".lvl");
         levelController.levelName = level.levelName;
         player.transform.position = level.PlayerPosition;

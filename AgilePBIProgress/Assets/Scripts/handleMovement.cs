@@ -18,7 +18,6 @@ public class handleMovement : MonoBehaviour
 
     public Vector3 defaultCameraPosition;
     private bool canSeePlayer;
-    private GameObject oldHitObject = null;
     private GameObject hitObject = null;
     private Vector3 referRotation;
     private Vector3 referPosition;
@@ -158,9 +157,6 @@ public class handleMovement : MonoBehaviour
     {
         float distanceBetweenMinMax = maximumHeightPoint.position.y - minimumHeightPoint.position.y;
         float currentDistanceBetween = maximumHeightPoint.position.y - transform.position.y;
-
-        float currentYPos = transform.position.y + defaultCameraPosition.y;
-
 
         if (transform.position.y <= minimumHeightPoint.position.y)
         {

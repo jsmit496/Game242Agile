@@ -19,11 +19,10 @@ public class MainMenuController : MonoBehaviour
     public Transform overheadCameraSpot;
 
     bool rotate = true;
-    Vector3 levelStartRotation;
 
     public void Start()
     {
-        levelStartRotation = level.localEulerAngles;
+
     }
 
     public void Update()
