@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - MainMenuController
   - WorldLight
+  - LevelController
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - PostProcessing
   - Unwalkable
   - Floor
-  - 
-  - 
+  - PathfindingMarker
+  - Player
   - 
   - 
   - 

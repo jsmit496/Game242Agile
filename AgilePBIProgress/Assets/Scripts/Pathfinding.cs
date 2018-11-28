@@ -35,6 +35,9 @@ public class Pathfinding : MonoBehaviour
             targetNode = null;
         }
         startPosition.position = Vector3.MoveTowards(startPosition.position, goToPosition, speed * Time.deltaTime);
+        Vector3 targetDir = goToPosition - startPosition.position;
+        Vector3 newDir = Vector3.RotateTowards(startPosition.forward, targetDir, speed * Time.deltaTime, 0.0f);
+        startPosition.rotation = Quaternion.LookRotation(newDir);
 
     }
 
@@ -115,12 +118,12 @@ public class Pathfinding : MonoBehaviour
 
     void FollowPath(List<Node> pathToFollow)
     {
+        float moveSpeed = speed * Time.deltaTime;
         foreach (Node node in pathToFollow)
         {
             while (startPosition.position != node.position)
             {
-                Vector3 goToPosition = new Vector3(node.position.x, startPosition.position.y, node.position.z);
-                startPosition.position = Vector3.Lerp(startPosition.position, goToPosition, speed * Time.deltaTime);
+                startPosition.position = Vector3.Lerp(startPosition.position, node.position, moveSpeed);
             }
         }
     }
