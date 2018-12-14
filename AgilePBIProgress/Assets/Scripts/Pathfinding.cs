@@ -6,9 +6,7 @@ public class Pathfinding : MonoBehaviour
 {
     public Transform startPosition;
     public Transform targetPosition;
-    public GameObject[] objectToCheck;
-    public string[] component;
-    
+    public GameObject pathfindingGrid;
 
     public float speed = 4.0f;
 
@@ -19,14 +17,13 @@ public class Pathfinding : MonoBehaviour
 
     private void Awake()
     {
-        grid = GetComponent<Grid>();
+        grid = pathfindingGrid.GetComponent<Grid>();
     }
 
     private void Update()
     {
-        //player.position = Vector3.MoveTowards(player.position, new Vector3(pathToFollow[count].nodePosition.x, 0, pathToFollow[count].nodePosition.z), speed * Time.deltaTime);
         FindPath(startPosition.position, targetPosition.position);
-        //FollowPath(grid.path);
+
         if (grid.path != null && startPosition.position != targetPosition.position && grid.path.Count > 0)
         {
             targetNode = grid.path[0];
@@ -117,17 +114,5 @@ public class Pathfinding : MonoBehaviour
         int y = Mathf.Abs(_nodeA.gridY - _nodeB.gridY);
 
         return x + y;
-    }
-
-    void FollowPath(List<Node> pathToFollow)
-    {
-        float moveSpeed = speed * Time.deltaTime;
-        foreach (Node node in pathToFollow)
-        {
-            while (startPosition.position != node.position)
-            {
-                startPosition.position = Vector3.Lerp(startPosition.position, node.position, moveSpeed);
-            }
-        }
     }
 }

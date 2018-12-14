@@ -11,21 +11,6 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1761052000952658}
   m_IsPrefabAsset: 1
---- !u!1 &1338150810584276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4870435120116676}
-  m_Layer: 0
-  m_Name: StaminaStartPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1761052000952658
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,31 +24,19 @@ GameObject:
   - component: {fileID: 136814260979182392}
   - component: {fileID: 114204573057295386}
   - component: {fileID: 114233901750636582}
+  - component: {fileID: 114442901440581950}
   - component: {fileID: 54235608674112770}
   - component: {fileID: 114711164650981888}
   - component: {fileID: 114530049058288576}
   - component: {fileID: 114285041245580670}
   - component: {fileID: 114467138283628158}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4870435120116676
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1338150810584276}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0000000074505797, w: 1}
-  m_LocalPosition: {x: 0.26999998, y: 1.72, z: -0.76}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4920150914350764}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4920150914350764
 Transform:
   m_ObjectHideFlags: 1
@@ -73,8 +46,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.19, y: 1, z: -12.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4870435120116676}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -166,16 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   jumpSpeed: 4
-  fadeSpeed: 0.05
-  fadeAmount: 0.2
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   playerCamera: {fileID: 0}
-  minimumHeightPoint: {fileID: 0}
-  maximumHeightPoint: {fileID: 0}
-  staminaBar: {fileID: 0}
-  defaultCameraPosition: {x: 0, y: 0, z: 0}
-  distanceBetweenCameraPlayer: 0
 --- !u!114 &114285041245580670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,6 +152,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c1a3e574fdaed41b3ac5d56500a0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114442901440581950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761052000952658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5563c25ff75364b889913655f62bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  minimumHeightPoint: {fileID: 0}
+  maximumHeightPoint: {fileID: 0}
+  defaultCameraPosition: {x: 0, y: 0, z: 0}
+  distanceBetweenCameraPlayer: 0
+  fadeSpeed: 0.05
+  fadeAmount: 0.2
 --- !u!114 &114467138283628158
 MonoBehaviour:
   m_ObjectHideFlags: 1

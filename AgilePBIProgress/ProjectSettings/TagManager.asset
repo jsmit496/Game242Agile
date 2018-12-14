@@ -9,6 +9,7 @@ TagManager:
   - MainMenuController
   - WorldLight
   - LevelController
+  - Animal
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Floor
   - PathfindingMarker
   - Player
-  - 
-  - 
+  - Animal
+  - Enemy
   - 
   - 
   - 

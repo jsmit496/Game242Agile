@@ -54,6 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {fileID: 0}
   targetPosition: {fileID: 0}
+  objectToCheck:
+  - {fileID: 0}
+  - {fileID: 1747503463386584}
+  component:
+  - Grid
+  - Pathfinding
+  - TemperatureManager
   speed: 4
 --- !u!114 &114824607390387332
 MonoBehaviour:
